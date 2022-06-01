@@ -44,5 +44,6 @@ custom_domains = {
         "bankino.digital",
         "chapchi.com",
         "quera.org",
+        "iranecar.com",
     ],
 }
