@@ -45,5 +45,6 @@ custom_domains = {
         "chapchi.com",
         "quera.org",
         "iranecar.com",
+        "netbarg.com",
     ],
 }
