@@ -16,6 +16,7 @@ def collect_and_clean_domains(*domain_set: Iterable[Iterable[str]]) -> Iterable[
     domains = filter(utils.is_url, domains)
     domains = filter(utils.is_not_ip, domains)
     domains = map(utils.convert_utf8, domains)
+    domains = filter(utils.filter_persian, domains)
     return sorted(domains)
 
 

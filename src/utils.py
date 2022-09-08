@@ -1,6 +1,5 @@
 import os
 import re
-from email import header
 
 import requests
 
@@ -54,6 +53,11 @@ IP_REGEX = re.compile(
 
 IR_DOMAIN_REGEX = re.compile(r"\.ir$", re.IGNORECASE)
 
+PERSIAN_CHARS_REGEX = re.compile(
+    r"[\u0622\u0627\u0628\u067E\u062A-\u062C\u0686\u062D-\u0632"
+    r"\u0698\u0633-\u063A\u0641\u0642\u06A9\u06AF\u0644-\u0648\u06CC\u06F0-\u06F9]"
+)
+
 
 def extract_domain(url: str) -> str:
     matched_domain = URL_REGEX.search(url.strip())
@@ -79,6 +83,10 @@ def is_url(text: str) -> bool:
 
 def convert_utf8(text: str) -> str:
     return text.encode("utf-8", errors="ignore").decode("utf-8")
+
+
+def filter_persian(text: str):
+    return not bool(PERSIAN_CHARS_REGEX.search(text))
 
 
 def download(url: str, path: str, method: str = 'GET', headers: dict = None, payload: str = None):
