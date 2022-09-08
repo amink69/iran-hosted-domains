@@ -1,4 +1,4 @@
-from collections import Iterable
+from typing import Iterable
 
 import requests
 
@@ -10,10 +10,12 @@ def g2b_ito_gov() -> Iterable[str]:
     resp = requests.post(consts.g2b_gov_url,
                          allow_redirects=True,
                          verify=False,
-                         data="__RequestVerificationToken=duB0tkYUqhE6tkRpAl2Py5n7A8TgiG5gvw6aJOkccAmOdT72ONRHgmKxLbT0Pd_J2cQTRACu7OHJB1ofYqCkr4wwF3KoIC7EYUpLvaeIWvU1&ExportExcel=true",
+                         data="__RequestVerificationToken=anT-gJxRm88BDXiQ9xx58aXWIe6ORnFgkcVUjH8omQCPkB_Sp_IInXGLln0pA2F7BFTrzmL6ZLNuedLsnDTaMTtvSt81&ExportExcel=true&Sort=ApproveDate",
                          headers={
                              'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                             'Cookie': '__RequestVerificationToken=28Ler0j0Udsc1-A5gpuq2ODdS9qbv7NHP1MaI40R7NvUC2fxIu5L6ynPRPl68jwZQhBb7ktjitJnoIh_Jr97cYse2MvVW7xh_55WSQflekU1; ASP.NET_SessionId=kjn05bvrle2ulrchfvx1tjpa'
+                             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36',
+                             'X-Requested-With': 'XMLHttpRequest',
+                             'Cookie': '__RequestVerificationToken=l-l78QxaBtMOJaDmvU4o22T759ExIEMvs4JsxAmqLCKzy1yiDiBNUDyO7SAO12xlqenpyzNf5vXzQ7TXLpM3bC_YBz81; ASP.NET_SessionId=t5c2ttxxlctggncpdyh0zvju'
                          })
     resp.raise_for_status()
 

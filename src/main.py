@@ -21,6 +21,8 @@ def collect_and_clean_domains(*domain_set: Iterable[Iterable[str]]) -> Iterable[
 
 
 if __name__ == "__main__":
+    utils.fix_requests_ssl()
+
     # if not os.path.exists("download"):
     #     os.mkdir("download")
     if not os.path.exists("output"):

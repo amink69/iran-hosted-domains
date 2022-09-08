@@ -103,3 +103,12 @@ def download(url: str, path: str, method: str = 'GET', headers: dict = None, pay
 def save_to_file(path: str, content: str):
     with open(path, "w") as fp:
         fp.write(content)
+
+
+def fix_requests_ssl():
+    requests.packages.urllib3.disable_warnings()
+    requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
+    try:
+        requests.packages.urllib3.contrib.pyopenssl.util.ssl_.DEFAULT_CIPHERS += ':HIGH:!DH:!aNULL'
+    except AttributeError:
+        pass
