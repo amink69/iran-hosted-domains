@@ -1,12 +1,12 @@
 # https://eservices.ito.gov.ir/page/iplist
 g2b_gov_url = "https://eservices.ito.gov.ir/Page/GetIPList"
-# g2b_gov_file_path = "download/eservices.ito.gov.xls"
+ads_url = "https://raw.githubusercontent.com/MasterKia/PersianBlocker/main/PersianBlockerHosts.txt"
 
 # input files
-ad_domains_path = "src/data/ads.txt"
 adsl_tci_file_path = "src/data/adsl_tci.txt"
 
 # Output files
+ad_domains_path = "output/ads.txt"
 ir_domains_path = "output/ir_domains.txt"
 other_domains_path = "output/other_domains.txt"
 all_domains_path = "output/domains.txt"

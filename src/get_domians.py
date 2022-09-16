@@ -1,8 +1,9 @@
+import re
 from typing import Iterable
 
 import requests
-
 from lxml.html.soupparser import fromstring
+
 import constants as consts
 
 
@@ -29,5 +30,11 @@ def adsl_tci() -> Iterable[str]:
 
 
 def ads() -> Iterable[str]:
-    with open(consts.ad_domains_path, "r") as fp:
-        return sorted(fp.read().splitlines())
+    resp = requests.get(consts.ads_url)
+    resp.raise_for_status()
+
+    ads = resp.text
+    ads = re.sub(r'(?m)^\s*#.*\n?', '', ads)
+    ads = ads.splitlines()[1:]
+    ads = (ad.strip() for ad in ads if ad.strip() != '')
+    return sorted(ads)
