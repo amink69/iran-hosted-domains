@@ -132,7 +132,7 @@ rule-providers:
   - [ADSL TCI](https://adsl.tci.ir/panel/sites)
   - [Custom List][link-custom]
 - ADs:
-  - [adblock-iran](https://github.com/farrokhi/adblock-iran)
+  - [PersianBlocker](https://github.com/MasterKia/PersianBlocker) (AGPL-3.0 License)
 
 If you know of any other source, or you found a website that isn't here, please open
 an [issue][link-issues] or add that specific website to [custom_domains.py][link-custom] and make a [PR][link-pr].

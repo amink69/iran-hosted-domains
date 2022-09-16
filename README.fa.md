@@ -114,7 +114,7 @@
   - [سامانه مدیریت اینترنت مشتریان شرکت مخابرات ایران](https://adsl.tci.ir/panel/sites)
   - [لیست شخصی][link-custom]
 - تبلیغات:
-  - [adblock-iran](https://github.com/farrokhi/adblock-iran)
+  - [PersianBlocker](https://github.com/MasterKia/PersianBlocker) (لایسنس AGPL-3.0)
 
 اگر شما منابع دیگری می‌شناسید، و یا وب‌سایتی پیدا کرده‌اید که اینجا نیست لطفا یک
 [issue](https://github.com/SamadiPour/iran-hosted-domains/issues) باز کنید و یا فایل [custom_domains.py][link-custom] را تغییر داده و [PR][link-pr] ایجاد کنید.
