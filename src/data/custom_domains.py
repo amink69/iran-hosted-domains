@@ -46,5 +46,8 @@ custom_domains = {
         "quera.org",
         "iranecar.com",
         "netbarg.com",
+        "tejaratbank.ir,
+        "soft98.ir",
+       "bmi.ir",
     ],
 }
